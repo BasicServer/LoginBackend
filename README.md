@@ -1,4 +1,4 @@
-# ExpressLogin
+# BasicLoginExpress 
 Simple login for express
 
 - Written in TypeScript
