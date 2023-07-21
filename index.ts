@@ -60,6 +60,7 @@ export default function setupLogin(
 				res.redirect(configuration.loginPath);
 			}
 		} catch {
+			console.error('Failed to process login request');
 			res.statusCode = 400;
 			res.redirect(configuration.loginPath);
 		}

@@ -1,6 +1,6 @@
 {
   "name": "basic-login-express",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple login for express",
   "main": "index.js",
   "scripts": {
