@@ -1,0 +1,19 @@
+{
+  "name": "expresslogin",
+  "version": "1.0.0-beta1",
+  "description": "Simple login for express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viridian035/ExpressLogin.git"
+  },
+  "author": "viridian035",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viridian035/ExpressLogin/issues"
+  },
+  "homepage": "https://github.com/viridian035/ExpressLogin#readme"
+}
