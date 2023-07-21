@@ -58,12 +58,12 @@ export default function setupLogin(
 				res.redirect(configuration.homePath);
 			} else {
 				res.statusCode = 401;
-				res.redirect(configuration.loginPath);
+				setTimeout(() => res.redirect(configuration.loginPath), 4000);
 			}
 		} catch {
 			console.error('Failed to process login request');
 			res.statusCode = 400;
-			res.redirect(configuration.loginPath);
+			setTimeout(() => res.redirect(configuration.loginPath), 4000);
 		}
 	});
 
