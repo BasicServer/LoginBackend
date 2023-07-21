@@ -26,6 +26,8 @@ App.listen(8080);
 ## Configuration
 - loginPath: string
     - Path to redirect to for login
+- homePath: string
+    - Path to redirect to when logged in
 - secureCookies: string = false
     - Use secure cookies (works only on HTTPS)
 

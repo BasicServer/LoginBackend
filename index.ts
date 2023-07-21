@@ -16,6 +16,7 @@ export interface LoginExtendedRequest extends Express.Request {
 
 export interface LoginConfiguration {
 	loginPath: string;
+	homePath: string;
 	secureCookies?: boolean;
 }
 
@@ -54,7 +55,7 @@ export default function setupLogin(
 				req.session.loginDate = new Date();
 
 				res.statusCode = 200;
-				res.redirect('/whoami');
+				res.redirect(configuration.homePath);
 			} else {
 				res.statusCode = 401;
 				res.redirect(configuration.loginPath);
