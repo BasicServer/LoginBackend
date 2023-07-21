@@ -74,7 +74,7 @@ export default function setupLogin(
 
 	//redirect to login page
 	expressApp.all('*', (req: LoginExtendedRequest, res, next) => {
-		if (typeof req.session.username != 'string' && req.path != configuration.loginPath) {
+		if (typeof req.session.username != 'string' && req.path != configuration.loginPath && checkIsLikelyRequestingHTML(req.path)) {
 			res.redirect(configuration.loginPath);
 		} else {
 			next();
@@ -97,4 +97,14 @@ export default function setupLogin(
 			next();
 		}
 	});
+}
+
+// UTILITY
+function checkIsLikelyRequestingHTML(path: string): boolean {
+	const [suffix] = path.split('.').reverse();
+
+	return (
+		suffix == path || //no suffix
+		suffix == 'html'
+	)
 }
