@@ -3,7 +3,6 @@ Simple login for express
 
 - Written in TypeScript
 - Authentication in your hands
-- Uses `express-session` and `Express.urlencoded`
 
 ## Usage Example
 ```TypeScript

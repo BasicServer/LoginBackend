@@ -1,5 +1,6 @@
 import Express from 'express';
 import session, { Session } from 'express-session';
+import BodyParser from 'body-parser';
 import * as Crypto from 'crypto';
 
 // TYPES
@@ -26,9 +27,7 @@ export default function setupLogin(
 	checkLogin: LoginChecker,
 	configuration: LoginConfiguration,
 ) {
-
 	//setup
-	expressApp.use(Express.urlencoded({ extended: true }));
 	expressApp.use(
 		session({
 			secret: Crypto.randomBytes(18).toString('hex'),
@@ -38,8 +37,10 @@ export default function setupLogin(
 		}),
 	);
 
+	const bodyParser = BodyParser.urlencoded({extended: true});
+
 	//routes
-	expressApp.post('/login', (req: LoginExtendedRequest, res) => {
+	expressApp.post('/login', bodyParser, (req: LoginExtendedRequest, res) => {
 		try {
 			const { username, password } = req.body as any;
 
