@@ -1,5 +1,5 @@
 {
-  "name": "basic-login-express",
+  "name": "@basicserver/login-backend",
   "version": "1.0.9",
   "description": "Simple login for express",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/viridian035/BasicLoginExpress.git"
+    "url": "git+https://github.com/BasicServer/LoginBackend.git"
   },
   "author": "viridian035",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/viridian035/BasicLoginExpress/issues"
+    "url": "https://github.com/BasicServer/LoginBackend/issues"
   },
-  "homepage": "https://github.com/viridian035/BasicLoginExpress#readme",
+  "homepage": "https://github.com/BasicServer/LoginBackend#readme",
   "dependencies": {
     "express": "^4.18.2",
     "express-session": "^1.17.3"
