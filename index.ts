@@ -68,7 +68,7 @@ export default function setupLogin(
 		}
 	});
 
-	expressApp.get('/logout', (req: LoginExtendedRequest, res) => {
+	expressApp.post('/logout', (req: LoginExtendedRequest, res) => {
 		req.session.username = undefined;
 		req.session.loginDate = undefined;
 

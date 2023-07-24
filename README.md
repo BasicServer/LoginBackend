@@ -35,7 +35,7 @@ App.listen(8080);
     - Used to log in
     - Body: { username: string, password: string }
     - (Compatible with HTML form)
-- `GET /logout`
+- `POST /logout`
     - Logs out
 - `ALL *`
     - Redirects to login path if not logged in
