@@ -1,4 +1,4 @@
-# BasicLoginExpress 
+# LoginBackend
 Simple login for express
 
 - Written in TypeScript
@@ -7,7 +7,7 @@ Simple login for express
 ## Usage Example
 ```TypeScript
 import Express from 'express';
-import setupLogin from 'expresslogin';
+import setupLogin from '@basicserver/login-backend';
 
 const App = Express();
 
